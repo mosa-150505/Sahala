@@ -1,4 +1,4 @@
-----  This project is only for fun  -----
+#  This project is only for fun  
 
 --  activate the venv before launching the progam
         source venv/bin/activate.fish  (for fish terminal)
