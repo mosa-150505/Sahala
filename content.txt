@@ -1,0 +1,1 @@
+Une fois activé, vous verrez le nom de l'environnement entre parenthèses (venv) au début de la ligne dans votre terminal. Cela indique que les packages installés avec pip le seront uniquement dans cet environnement isolé.
