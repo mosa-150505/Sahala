@@ -8,19 +8,23 @@ PIP := $(VENV)/bin/pip
 
 install:
 	@echo "... Installing ..."
-	@python3 -m venv $(VENV)
+	@python3 -m venv $(VENV) || ( \
+		echo ""; \
+		echo "Missing 'venv' module"; \
+		echo "Install it by  sudo apt update && sudo apt install python3-venv"; \
+		echo ""; \
+		exit 1 \
+	)
 	@$(PYTHON) -c "import sys; print(f'Python {sys.version.split()[0]} found')"
 	@set -e; \
 	source $(VENV)/bin/activate; \
-	pip install --upgrade pip; \
-
+	pip install --upgrade pip
 
 run:
 	@echo "... Running ..."
 	@set -e; \
 	source $(VENV)/bin/activate; \
 	$(PYTHON) plagiarism_detector.py
-
 
 clean:
 	@echo "... Clean ..."
