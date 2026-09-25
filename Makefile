@@ -7,7 +7,7 @@ PIP := $(VENV)/bin/pip
 .PHONY: install run clean
 
 install:
-	"... Installing ..."
+	@echo "... Installing ..."
 	@python3 -m venv $(VENV)
 	@$(PYTHON) -c "import sys; print(f'Python {sys.version.split()[0]} found')"
 	@set -e; \
