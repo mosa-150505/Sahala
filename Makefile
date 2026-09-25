@@ -8,10 +8,10 @@ PIP := $(VENV)/bin/pip
 
 install:
 	@echo "... Installing ..."
-	@python3 -m venv $(VENV) || ( \
+	@python3 -m venv $(VENV) 2>/dev/null || ( \
 		echo ""; \
-		echo "❌ Erreur : Le module 'venv' est manquant."; \
-		echo "Installez-le avec : sudo apt update && sudo apt install python3-venv"; \
+		echo "Missing 'venv' module"; \
+		echo "Install it by  sudo apt update && sudo apt install python3-venv"; \
 		echo ""; \
 		exit 1 \
 	)
