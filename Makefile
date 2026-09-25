@@ -10,8 +10,8 @@ install:
 	@echo "... Installing ..."
 	@python3 -m venv $(VENV) || ( \
 		echo ""; \
-		echo "Missing 'venv' module"; \
-		echo "Install it by  sudo apt update && sudo apt install python3-venv"; \
+		echo "❌ Erreur : Le module 'venv' est manquant."; \
+		echo "Installez-le avec : sudo apt update && sudo apt install python3-venv"; \
 		echo ""; \
 		exit 1 \
 	)
