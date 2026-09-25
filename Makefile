@@ -8,7 +8,7 @@ PIP := $(VENV)/bin/pip
 
 install:
 	@echo "... Installing ..."
-	@python3 -m venv $(VENV) /dev/null 2>&1 || ( \
+	@python3 -m venv $(VENV) >/dev/null 2>&1 || ( \
 		rm -rf $(VENV);\
 		echo ""; \
 		echo "Missing 'venv' module"; \
